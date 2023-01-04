@@ -29,20 +29,20 @@ def process(opt):
             img = cv2.imread(img_path)
             
             area = faces["face_1"]["facial_area"]
-            
-            area[0]-=10
+            print(area)
+            area[0]-=20
             if area[0]  < 0 : 
                 area[0] = 0
-            area[1] -= 10
+            area[1] -= 30
             if area[1]  < 0 : 
                 area[1] = 0
             area[2] += 10
             if area[2]  >= img.shape[1] : 
                 area[2] = img.shape[1]-1
-            area[3] += 10
+            area[3] -= 40
             if area[3]  >= img.shape[0] : 
                 area[3] = img.shape[0]-1
-            
+            print(area)
             data_processing.save_to_dataset(img ,area)
                 
             cnt+=1
