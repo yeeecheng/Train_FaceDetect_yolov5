@@ -1,0 +1,6 @@
+names:
+- face
+nc: 1
+path: /home/yi-cheng/Desktop/face_recognize_yolov5
+train: ../dataset/face_detect_dataset/images/train/
+val: ../dataset/face_detect_dataset/images/val/
