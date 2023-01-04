@@ -35,8 +35,7 @@ class dataset_processing:
         cv2.imwrite(dataset_image_path,img)
         x_min , y_min ,x_max ,y_max = area[0] ,area[1] , area[2] ,area[3]
         cv2.rectangle(img, (x_min, y_min), (x_max, y_max), (0,255,0), 3, cv2.LINE_AA)
-        cv2.imshow("frame",img)
-        cv2.waitKey(0)
+
         h , w  ,d =img.shape
         
         x_center = float(x_min+x_max)/2.0 * float(1.0/w)
